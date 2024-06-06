@@ -4,13 +4,13 @@
 #include <conio.h>
 #include <windows.h>
 #include <stdbool.h>
-#include <time.h>  //  random number generator
+#include <time.h>  //  for genarating random numbers
 
 #define ENTER 13
 #define WIDTH 80
 #define HEIGHT 25
 
-  //  Global variable decleration
+//  Global variable decleration
 int X1_cord = 30, Y1_cord = 2;
 int Head_X, Head_Y;
 int Tail_X[200], Tail_Y[200];
@@ -24,7 +24,7 @@ enum Direction
     STOP, LEFT, RIGHT, UP, DOWN
 } dir;
 
-   // Function prototype
+// Function prototype
 void Register(void);
 void accountcreated(void);
 void Login(void);
@@ -87,7 +87,7 @@ void Register()
     else
     {
         printf("\n\n\t\t\t WELCOME TO REGISTER ZONE");
-        printf("\n\t\t\t ~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        printf("\n\n\t-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n");
         fflush(stdin);
         printf("\n\t\t\tEnter your full name:\t\t");
         gets(set.name);
@@ -224,8 +224,8 @@ void Login()
     int i = 0;
     int check_email = 1, check_paswd = 1; // Initialize with a non-zero value to enter the loop
 
-    printf("\n\n\t\t\tWELCOME TO LOGIN ZONE");
-    printf("\n\n\t\t\t~~~~~~~~~~~~~~~~~~~~~");
+    printf("\n\n\t\t\tWELCOME TO LOGIN ZONE");      
+    printf("\n\n\t-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n");
     printf("\n\n\t\t\tENTER YOUR E-MAIL:\t");
     scanf("%s", email_id);
     printf("\n\n\t\t\tENTER YOUR PASSWORD:\t");
@@ -356,7 +356,7 @@ int main()
 {
     system("color 20");
     printf("\n\n\t\t\t WELCOME TO WORMS-ZONE");
-    printf("\n\t\t\t ~~~~~~~~~~~~~~~~~~~~~");
+    printf("\n\n\t-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n");
     printf("\n\n\t\tDeveloped by TEAM CRUSADERS");
     printf("\n\t\t\t-> ARUN ARYAL");
     printf("\n\t\t\t-> INTAF MALIK");
