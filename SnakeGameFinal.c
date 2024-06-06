@@ -58,7 +58,7 @@ void Gotoxy(int x, int y)
     c.Y = y;
  
     SetConsoleCursorPosition(
-        GetStdHandle(STD_OUTPUT_HANDLE), c);
+    GetStdHandle(STD_OUTPUT_HANDLE), c);
 }
 
 typedef struct setup
@@ -95,7 +95,7 @@ void Register()
         gets(set.email);
         printf("\n\t\t\tEnter your phone number:\t");
         scanf("%d", &set.number);
-        fflush(stdin); // To hold buffer
+        fflush(stdin); // To clear buffer
         printf("\n\t\t\tCreate a password:\t\t");
 
         // Read password character by character until ENTER is pressed or space is encountered
@@ -156,7 +156,7 @@ void Register()
         fwrite(&set, sizeof(set), 1, reg_file);
     }
 
-    fclose(reg_file); // Close the file when done
+    fclose(reg_file); 
     Gotoxy(WIDTH/2 , HEIGHT/2);
     printf("Press 'Enter' key to confirm registration");
     accountcreated(); // Calling another function after successfull register
@@ -173,7 +173,7 @@ void accountcreated(void)
     printf("PLEASE WAIT,YOUR REQUEST IS PROCESSING");
     for (i = 0; i < 4; i++)
      {
-        delay(100000);
+        delay(1000);
         printf(".");
     }
     system("cls");
@@ -199,7 +199,7 @@ void accountcreated(void)
         printf("PLEASE WAIT,YOUR REQUEST IS PROCESSING");
         for (i = 0; i < 4; i++)
         {
-        delay(100000);
+        delay(1000);
         printf(".");
        }
 
@@ -277,7 +277,7 @@ void Login()
                  
                     for (i = 0; i < 4; i++)
                   {
-                      delay(100000);
+                      delay(1000);
                       printf(".");
                   }
 
@@ -310,7 +310,7 @@ void Login()
             }
         }
 
-        fclose(login); // Close the file when done
+        fclose(login); 
         getch();
     }
 }
@@ -363,7 +363,7 @@ int main()
     printf("\n\t\t\t-> ARYAN THAPA");
     printf("\n\t\t\t-> AARYA DAHAL");
     printf("\n\n\t\t Press 'ENTER' key to continue...!!");
-    getchar(); // Use getchar() to wait for the Enter key
+    getchar(); 
     system("cls");
 
     printf("\n\n\t\t\t1.REGISTER\t\t2.LOGIN");
@@ -376,7 +376,7 @@ int main()
     case 1:
         system("cls");
         Register();
-        break; // Don't forget to break after each case
+        break; 
     case 2:
         system("cls");
         Login();
@@ -573,5 +573,4 @@ void bendLogic() {
         Tail_length++;  // Increasing  the length of snake
     }
 }
-
 
