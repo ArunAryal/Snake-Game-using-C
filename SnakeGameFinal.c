@@ -42,7 +42,7 @@ void delay(unsigned int milliseconds);
 
 // Simple delay using for loop
 void delay(unsigned int milliseconds) {
-    for (unsigned int i = 0; i < milliseconds * 10000; i++) {
+    for (unsigned int i = 0; i < milliseconds * 100; i++) {
         // Do nothing
     }
 }
